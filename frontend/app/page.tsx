@@ -1,21 +1,42 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { HeartPulse, ShieldCheck, FileText, User } from 'lucide-react';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-slate-50">
-      <div className="z-10 w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4">
-          Status: <span className="font-bold text-green-600 ml-2">Live Demo</span>
+    <main className="min-h-screen bg-teal-50/30 text-slate-800 font-sans">
+      <nav className="bg-white border-b border-slate-200 px-8 py-4 flex justify-between items-center">
+        <div className="text-2xl font-semibold text-teal-700 flex items-center gap-2">
+          <HeartPulse /> Vitalos <span className="text-xs bg-teal-100 text-teal-800 px-2 py-1 rounded-md ml-2">HIPAA Compliant</span>
+        </div>
+        <div className="flex gap-4 text-sm font-medium text-slate-600">
+          <span>Patients</span>
+          <span>Providers</span>
+          <span>Insurance</span>
+        </div>
+      </nav>
+
+      <div className="max-w-5xl mx-auto py-16 px-6 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Mental health care, <br/> intelligently delivered.</h1>
+        <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-12">
+          An end-to-end platform connecting patients with clinicians, automating intake with NLP, and ensuring secure data handling.
         </p>
-      </div>
-      <div className="relative flex flex-col place-items-center text-center">
-        <h1 className="text-6xl font-bold tracking-tight text-slate-900 mb-4">Vitalos</h1>
-        <p className="text-xl text-slate-600 max-w-2xl">Digital Mental Health Platform</p>
-        <div className="mt-8 flex gap-4">
-            <button className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition flex items-center gap-2">
-                Launch App <ArrowRight size={18} />
-            </button>
+
+        <div className="grid md:grid-cols-3 gap-8 text-left">
+          <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <ShieldCheck className="text-teal-600 mb-4" size={32} />
+            <h3 className="text-lg font-bold mb-2">Secure & Encrypted</h3>
+            <p className="text-slate-500 text-sm">End-to-end encryption for all patient records and video sessions.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <FileText className="text-teal-600 mb-4" size={32} />
+            <h3 className="text-lg font-bold mb-2">AI Intake Screening</h3>
+            <p className="text-slate-500 text-sm">NLP algorithms assist in initial risk assessment and triage.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <User className="text-teal-600 mb-4" size={32} />
+            <h3 className="text-lg font-bold mb-2">Patient Portal</h3>
+            <p className="text-slate-500 text-sm">Seamless appointment booking, medication tracking, and journaling.</p>
+          </div>
         </div>
       </div>
     </main>
